@@ -1,24 +1,23 @@
 <h1 align="center">Chronometer for the Numworks Calculator</h1>
 <p align="center">
     <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&color=blue">
-    <img alt="Stars" src="https://img.shields.io/github/stars/SaltyMold/TXT-Reader-for-Numworks?style=for-the-badge&color=magenta">
-    <img alt="Forks" src="https://img.shields.io/github/forks/SaltyMold/TXT-Reader-for-Numworks?color=cyan&style=for-the-badge&color=purple">
-    <img alt="License" src="https://img.shields.io/github/license/SaltyMold/TXT-Reader-for-Numworks?style=for-the-badge&color=blue">
+    <img alt="Stars" src="https://img.shields.io/github/stars/SaltyMold/Chronometer-for-Numworks?style=for-the-badge&color=magenta">
+    <img alt="Forks" src="https://img.shields.io/github/forks/SaltyMold/Chronometer-for-Numworks?color=cyan&style=for-the-badge&color=purple">
+    <img alt="License" src="https://img.shields.io/github/license/SaltyMold/Chronometer-for-Numworks?style=for-the-badge&color=blue">
     <br>
     <a href="https://github.com/SaltyMold"><img title="Developer" src="https://img.shields.io/badge/Developer-SaltyMold-red?style=flat-square"></a>
     <img alt="Maintained" src="https://img.shields.io/badge/Maintained-No-blue?style=flat-square">
     <img alt="Written In" src="https://img.shields.io/badge/Written%20In-C-yellow?style=flat-square">
 </p>
 
-_This app is a **[TXT](https://en.wikipedia.org/wiki/Text_file) reader** that runs on the **[NumWorks Calculator](https://www.numworks.com)**, allowing users to open and read plain text files directly on their device. It provides a simple interface for navigating through text, making it ideal for viewing notes, documents, and other text-based content._
+_This app is a **Chronometer** for the **[NumWorks calculator](https://www.numworks.com)**, providing **100% accuracy** for precise time tracking. It measures **milliseconds, seconds, minutes, and hours**, making it perfect for keeping track of time during classes, experiments, or any other activities._
 
 ## Install the app
 
 To install this app, you'll need to:
-1. Download the latest **`TXT-Reader.nwa` file** from the **[Releases](https://github.com/SaltyMold/TXT-Reader-for-Numworks/releases) page**
-2. Choose a **`txt` file** you want to read on your **calculator**.
+1. Download the latest **`Chronometer.nwa` file** from the **[Releases](https://github.com/SaltyMold/Chronometer-for-Numworks/releases) page**
 3. Connect your **NumWorks calculator** to your computer using a USB cable.  
-4. Head to **[my.numworks.com/apps](https://my.numworks.com/apps)** to send the **`nwa` file** on your calculator along the **`txt` file**.
+4. Head to **[my.numworks.com/apps](https://my.numworks.com/apps)** to send the **`nwa` file** on your calculator.
 
 ## How to use the app
 
@@ -31,21 +30,25 @@ To install this app, you'll need to:
           <th>Action</th>
         </tr>
         <tr>
-          <td>Back</td>
+          <td>Home</td>
           <td>Quit</td>
         </tr>
         <tr>
-          <td>Arrow Down</td>
-          <td>Down</td>
+          <td>OK</td>
+          <td>Do the Action</td>
         </tr>
         <tr>
-          <td>Arrow Up</td>
-          <td>Up</td>
+          <td>Arrow Right</td>
+          <td>Go to the Right</td></td>
+        </tr>
+        <tr>
+          <td>Arrow Left</td>
+          <td>Go to the Left</td>
         </tr>
       </table>
     </td>
     <td style="padding-left: 20px;">
-      <img src="https://github.com/user-attachments/assets/632d2643-af72-4ed0-a10f-5eafbf255c7c" width="150" alt="TXT-Reader-Numworks">
+      <img src="https://github.com/user-attachments/assets/013e6a53-494b-43a3-b867-70ecc8998cf0" width="150" alt="Chronometer-Numworks">
     </td>
   </tr>
 </table>
@@ -58,8 +61,8 @@ To build this sample app, you will need to install the **[embedded ARM toolchain
 
 ```sh
 sudo apt install -y build-essential git gcc-arm-none-eabi binutils-arm-none-eabi nodejs npm && npm install -g n && sudo n 18 && npm install -g nwlink@0.0.16
-git clone https://github.com/SaltyMold/TXT-Reader-for-Numworks.git
-cd TXT-Reader-for-Numworks
+git clone https://github.com/SaltyMold/Chronometer-for-Numworks.git
+cd Chronometer-for-Numworks
 make clean && make build
 ```
 
@@ -112,9 +115,9 @@ arm-none-eabi-gcc --version
 
 pacman -S --noconfirm git
 git --version
-git clone https://github.com/SaltyMold/TXT-Reader-for-Numworks.git
+git clone https://github.com/SaltyMold/Chronometer-for-Numworks.git
 
-cd TXT-Reader-for-Numworks
+cd Chronometer-for-Numworks
 make clean && make build
 ```
 
@@ -125,8 +128,9 @@ You should now have a **`output/app.nwa` file** that you can distribute! Anyone 
 To build your own app, start by cloning the repository:
 
 ```sh
-git clone https://github.com/SaltyMold/TXT-Reader-for-Numworks.git
+git clone https://github.com/SaltyMold/Chronometer-for-Numworks.git
 ```
+
 Inside the project, you'll find **`eadk.h`**, which provides **essential functions** for interacting with the **[calculator](https://en.wikipedia.org/wiki/NumWorks)**. Modify **`main.c`** to implement your **own code**.
 Additionally, make sure to include an **`icon.png`** with dimensions **55×56 pixels** to serve as your **app’s icon**. Once your modifications are done, link the app with **[nwlink](https://www.npmjs.com/package/nwlink)** and enjoy your app!
 
