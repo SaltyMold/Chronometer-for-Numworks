@@ -12,7 +12,7 @@ const uint32_t eadk_api_level  __attribute__((section(".rodata.eadk_api_level"))
 bool running = false; 
 uint64_t start_time = 0;
 uint64_t elapsed_time = 0;
-int milliseconds = 0; // Declare milliseconds here
+int milliseconds = 0;
 
 typedef struct {
   const char* label;
@@ -74,7 +74,7 @@ int main() {
 
     eadk_display_draw_string("STOPWATCH", (eadk_point_t){129, 3}, false, eadk_color_white, eadk_color_orange);
 
-    int selected_button = 1; // Start with "PAUSE" selected when "START" is not shown
+    int selected_button = 1; 
     bool showStart = true;
     draw_buttons(selected_button, showStart);
 
@@ -102,7 +102,6 @@ int main() {
             }
         }
         if (eadk_keyboard_key_down(state, eadk_key_ok)) {
-            // Handle button click
             if (showStart) {
                 running = true;
                 start_time = eadk_timing_millis();
@@ -122,10 +121,10 @@ int main() {
                 } else if (selected_button == 2) {
                     running = false;
                     elapsed_time = 0;
-                    eadk_display_push_rect_uniform((eadk_rect_t){0, 190, 320, 50}, eadk_color_white); // Clear the time display area
+                    eadk_display_push_rect_uniform((eadk_rect_t){0, 190, 320, 50}, eadk_color_white); 
                     drawTime();
                     showStart = true;
-                    clear_buttons(); // Clear PAUSE and STOP buttons
+                    clear_buttons(); 
                     draw_buttons(selected_button, showStart);
                     eadk_timing_msleep(200);
                 }
