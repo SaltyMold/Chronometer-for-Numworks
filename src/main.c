@@ -120,6 +120,7 @@ int main() {
             if (eadk_keyboard_key_down(state, eadk_key_ok)) {
                 // Handle button click
                 if (showStart) {
+                    selected_button = 1;
                     running = true;
                     start_time = eadk_timing_millis();
                     showStart = false;
